@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="ddf-ng-timeline">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="css/bootplus.css"/>
+  <link rel="stylesheet" href="css/bootplus-responsive.css"/>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+</head>
+
+<!-- define angular controller -->
+<body>
+  <!-- -->
+  <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div class="navbar-header">
+				        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        </button>
+				        <a class="navbar-brand" rel="home" href="#" title="ddf-ngTimeline">ddf-ngTimeline</a>
+				    </div>
+				    <div class="collapse navbar-collapse navbar-ex1-collapse">
+				    	<div class="col-sm-10 col-md-10">
+					    	<form class="navbar-form" role="search" method="get" id="search-form" name="search-form">
+					        	<div class="btn-group pull-left" style="margin-right:10px;">
+					        	    <ul class="nav navbar-nav navbar-left">
+                                        <li><a href="#"><i class="fa fa-home"></i> Simple TML</a></li>
+                                        <li><a href="#tmla"><i class="fa fa-shield"></i> TML Angularified</a></li>
+                                    </ul>   		
+								</div>
+					        </form>
+				        </div>
+				    </div>
+				</div>				
+			</div>	
+
+  <div class="row-fluid" style="margin-top:10px;">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <div class="row-fluid">
+        <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" rel="home" href="www.danilodelfio.com" title="ddf-ngTimeline">Danilo Del Fio</a>
+            </div>
+          </div>
+  </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="lib/angular/angular.js"></script>
+  <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/services.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
+  <script type="text/javascript" src="js/directives.js"></script>
+
+
+  <script>
+      // This script is useful for body padding 
+      $(window).on('resize load', function() {
+            $('body').css({"padding-top": $(".navbar").height() + "px"});
+        });
+  </script>
+</body>
+
+</html>
