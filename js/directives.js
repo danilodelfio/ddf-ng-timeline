@@ -19,9 +19,7 @@ ngTimelineDir.directive( 'ddfTimelineEntry', function ( $compile ) {
     replace: 'true',
     templateUrl: 'partials/timeLineEntry.html',
     link: function ( scope, element, attrs ) {
-        console.log('attrs.response: '+attrs.response);
         if(attrs.response=='true') {
-            console.log(element);
             element.addClass('timeline-inverted');
         }
     }
